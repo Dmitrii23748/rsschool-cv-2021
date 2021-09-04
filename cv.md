@@ -22,10 +22,8 @@ I've been programming for about six months. I want to gain more knowledge in the
 
 ## Code Example:
 
-function multiply(x, y) {
-
-return x \* y;
-
+function multiply(x, y) {  
+ return x \* y;  
 }
 
 let result = multiply(2, 2);
