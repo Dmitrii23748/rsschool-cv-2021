@@ -83,8 +83,14 @@ p {
 }
 .contacts__li-p {
   font-size: 33px;
+  color: black;
+}
+
+.contacts__li-a {
+  color: black;
+  text-decoration: none;
   cursor: pointer;
 }
-.contacts__li-p:hover {
-  color: red;
+.contacts__li-a:hover {
+  color: rgb(245, 19, 124);
 }
