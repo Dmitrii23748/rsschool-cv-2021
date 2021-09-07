@@ -11,23 +11,38 @@ h4,
 h5,
 h6,
 ul,
-li {
+li,
+p {
   margin: 0;
   padding: 0;
 }
 .wrapper {
-  background-color: rgb(192, 238, 227);
+  background-color: rgb(217, 243, 237);
   padding: 20px 10px;
   overflow: hidden;
 }
 .header {
   display: flex;
   justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  position: relative;
+}
+.header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 470px;
+  border-radius: 2px;
+  background-color: rgb(170, 163, 163);
 }
 .header__title {
-  font-size: 80px;
-  line-height: 1.7;
-  margin-right: 30px;
+  font-size: 90px;
+  line-height: 1.4;
+  padding-right: 70px;
   text-align: center;
 }
 
@@ -44,4 +59,32 @@ li {
 .container {
   display: flex;
   justify-content: space-between;
+}
+.aside {
+  width: 340px;
+  padding: 0 10px;
+}
+
+.contacts__title {
+  margin-bottom: 30px;
+  font-size: 55px;
+}
+
+.contacts__li-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+.contacts__li-img {
+  height: 30px;
+  object-fit: contain;
+  object-position: center;
+}
+.contacts__li-p {
+  font-size: 33px;
+  cursor: pointer;
+}
+.contacts__li-p:hover {
+  color: red;
 }
