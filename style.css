@@ -16,6 +16,10 @@ p {
   margin: 0;
   padding: 0;
 }
+ul,
+li {
+  list-style: none;
+}
 .wrapper {
   background-color: rgb(217, 243, 237);
   padding: 20px 10px;
@@ -25,6 +29,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   padding-top: 50px;
   padding-bottom: 50px;
   position: relative;
@@ -35,7 +40,7 @@ p {
   bottom: 0;
   left: 0;
   height: 4px;
-  width: 470px;
+  min-width: 336px;
   border-radius: 2px;
   background-color: rgb(170, 163, 163);
 }
@@ -48,7 +53,7 @@ p {
 
 .header__photo-img {
   border-radius: 10px;
-  height: 400px;
+  max-height: 400px;
   object-fit: contain;
   object-position: center;
   -webkit-box-shadow: 7px -5px 32px -2px rgba(35, 41, 37, 0.44);
@@ -59,13 +64,31 @@ p {
 .container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 50px 10px;
 }
 .aside {
-  width: 340px;
-  padding: 0 10px;
+  flex: 0 1 340px;
+  padding-right: 50px;
+  border-right: 4px solid rgb(170, 163, 163);
+}
+.skills {
+  flex: 0 1 160px;
+  text-align: center;
 }
 
-.contacts__title {
+.aboutme {
+  flex: 0 1 640px;
+  border-left: 4px solid rgb(170, 163, 163);
+  padding-left: 50px;
+}
+.aboutme p {
+  font-size: 32px;
+  line-height: 1.4;
+  text-indent: 40px;
+}
+
+.container__title {
   margin-bottom: 30px;
   font-size: 55px;
 }
@@ -74,6 +97,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   margin-bottom: 18px;
 }
 .contacts__li-img {
@@ -81,7 +105,8 @@ p {
   object-fit: contain;
   object-position: center;
 }
-.contacts__li-p {
+.contacts__li-p,
+.skills__it-li {
   font-size: 33px;
   color: black;
 }
@@ -93,4 +118,49 @@ p {
 }
 .contacts__li-a:hover {
   color: rgb(245, 19, 124);
+}
+
+.footer {
+  position: relative;
+  padding-top: 30px;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 4px;
+  min-width: 582px;
+  border-radius: 2px;
+  background-color: rgb(170, 163, 163);
+}
+
+.footer__item {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+}
+
+.footer__item-github:hover {
+  border-bottom: 2px solid rgb(245, 19, 124);
+}
+.footer__item-github img {
+  height: 50px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.footer__item-logo:hover {
+  border-bottom: 2px solid rgb(245, 19, 124);
+}
+.footer__item-logo img {
+  height: 50px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.footer__item-li p {
+  font-size: 27px;
 }
