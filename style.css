@@ -71,10 +71,12 @@ li {
   flex: 0 1 340px;
   padding-right: 50px;
   border-right: 4px solid rgb(170, 163, 163);
+  margin-bottom: 20px;
 }
 .skills {
   flex: 0 1 160px;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .aboutme {
@@ -163,4 +165,57 @@ li {
 
 .footer__item-li p {
   font-size: 27px;
+}
+
+@media (max-width: 1300px) {
+  .container {
+    justify-content: center;
+  }
+  .aside {
+    flex: 0 1 340px;
+  }
+  .skills {
+    flex: 0 1 260px;
+  }
+  .aboutme {
+    border-left: none;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 710px) {
+  .container {
+    text-align: center;
+  }
+  .aside {
+    border: none;
+  }
+}
+
+@media (max-width: 390px) {
+  .header__title {
+    font-size: 70px;
+    line-height: 1.2;
+    padding-right: 0px;
+    text-align: center;
+  }
+  .container__title {
+    margin-bottom: 20px;
+    font-size: 35px;
+  }
+  .contacts__li-p {
+    font-size: 23px;
+  }
+  .skills__it-li {
+    font-size: 23px;
+  }
+  .aboutme p {
+    font-size: 23px;
+    line-height: 1.2;
+  }
+  .footer__item-logo img {
+    height: 30px;
+    object-fit: contain;
+    object-position: center;
+  }
 }
