@@ -7,65 +7,131 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     
     <title>CV HTML CSS</title>
 </head>
 <body>
     <div class="wrapper">
-        <header class="header">
-            <h1 class="header__title"> Hello,<br> I`m Chunosov Dmitrii <br> from Minsk</h1>
-            <div class="header__photo">
-                <img class="header__photo-img" src="img/photo.jpg" alt="photo">
-            </div>
-        </header>
-        <main class="container">
-            <section class="aside">
-                <div class="contacts">
-                    <h2 class="container__title">Contacts:</h2>
-                    <ul class="contacts__ul">
-                        <li class="contacts__li-item">
-                            <img class="contacts__li-img" src="img/phone.svg" alt="phone">
-                            <p class="contacts__li-p">+375 29 662 06 89</p>
+        <header class="header-block">
+            <div class="header-burger">
+                <div class="menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <nav class="menu">
+                    <ul class="menu__box">
+                        <li class="menu__item">
+                            <a class="menu__item-link" href="#aboutme-id" >About me</a>
                         </li>
-                        <li class="contacts__li-item">
-                            <img class="contacts__li-img" src="img/mail.svg" alt="mail">
-                            <p class="contacts__li-p">chunosov.dmitrij@bk.ru</p>
+                        <li class="menu__item">
+                            <a class="menu__item-link" href="#skills-id" >Skills</a>
                         </li>
-                        <li class="contacts__li-item">
-                            <img class="contacts__li-img" src="img/link.svg" alt="link">
-                            <a class="contacts__li-p contacts__li-a" 
-                            href="https://www.linkedin.com/in/dmitrii-chunosov-b05936212/" 
-                            target="_blank">
-                            Linkendin
-                        </a>
+                        <li class="menu__item">
+                            <a class="menu__item-link" href="#aside-id" >Contacts</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__item-link" href="#code-id" >My code</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__item-link" href="#jobs-id" >My jobs</a>
                         </li>
                     </ul>
+                </nav>
+            </div>
+            
+            <div class="header-portfolio"> 
+                <h1 class="header-portfolio__title"> Hello,<br> I`m Chunosov Dmitrii <br> from Minsk</h1>
+                <div class="header-portfolio__photo">
+                    <img class="header-portfolio__photo-img" src="img/photo.jpg" alt="photo">
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="container">
+                <section  id="aside-id" class="aside">
+                    <div class="contacts">
+                        <h2 class="container__title">Contacts:</h2>
+                        <ul class="contacts__ul">
+                            <li class="contacts__li-item">
+                                <img class="contacts__li-img" src="img/phone.svg" alt="phone">
+                                <p class="contacts__li-p">+375 29 662 06 89</p>
+                            </li>
+                            <li class="contacts__li-item">
+                                <img class="contacts__li-img" src="img/mail.svg" alt="mail">
+                                <p class="contacts__li-p">chunosov.dmitrij@bk.ru</p>
+                            </li>
+                            <li class="contacts__li-item">
+                                <img class="contacts__li-img" src="img/link.svg" alt="link">
+                                <a class="contacts__li-p contacts__li-a" 
+                                href="https://www.linkedin.com/in/dmitrii-chunosov-b05936212/" 
+                                target="_blank">
+                                Linkendin
+                            </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section id="skills-id" class="skills">
+                    <h2 class="container__title">Skills:</h2>
+                    <ul class="skills__it">
+                        <li class="skills__it-li">HTML</li>
+                        <li class="skills__it-li">CSS</li>
+                        <li class="skills__it-li">SCSS</li>
+                        <li class="skills__it-li">LESS</li>
+                        <li class="skills__it-li">FIGMA</li>
+                        <li class="skills__it-li">Java Script</li>
+                        <li class="skills__it-li">React</li>
+                        <li class="skills__it-li">Redux</li>
+                        <li class="skills__it-li">English - A2</li>
+                    </ul>
+                </section>
+                <section id="aboutme-id" class="aboutme">
+                    <h2 class="container__title">About Me:</h2>
+                    <p>I am a beginner front-end developer. I've been programming for six months.</p>
+                    <p>I am currently learning react-redux. </p>
+                    <p>In the future, I plan to study Node js to use it in backand development.
+                        I enjoy working in a team. 
+                    </p>
+                    <p>I believe that my perseverance and stubbornness will help me to become 
+                        a front-end developer at the beginning and then a full stack developer.</p>
+                </section>
+            </div>
+            <section id="code-id" class="code">
+                <h1 class="code__title">My Code:</h1>
+                <div class="code__block">
+                    <p class="code__block-text">getCommonCharacterCount( s1, s2 ) {</p>
+                    <p class="code__block-text">let count = 0;</p>
+                    <p class="code__block-text">if (typeof s1 === 'string' && typeof s2 === 'string' ) {</p>
+                    <p class="code__block-text">&nbsp for(let i = 0; i < s1.length; i++){</p>
+                    <p class="code__block-text">&nbsp &nbsp if ( s2.indexOf(s1[i] ) > -1 ){</p>  
+                    <p class="code__block-text">&nbsp &nbsp &nbsp count++;</p>
+                    <p class="code__block-text">&nbsp &nbsp &nbsp s2 = s2.replace(s1[i],'');</p>
+                    <p class="code__block-text">&nbsp &nbsp &nbsp &nbsp }</p>
+                    <p class="code__block-text">&nbsp &nbsp &nbsp }</p> 
+                    <p class="code__block-text">&nbsp &nbsp } </p>                 
+                    <p class="code__block-text">&nbsp &nbsp return count;</p>
+                    <p class="code__block-text">}</p>
                 </div>
             </section>
-            <section class="skills">
-                <h2 class="container__title">Skills:</h2>
-                <ul class="skills__it">
-                    <li class="skills__it-li">HTML</li>
-                    <li class="skills__it-li">CSS</li>
-                    <li class="skills__it-li">SCSS</li>
-                    <li class="skills__it-li">LESS</li>
-                    <li class="skills__it-li">FIGMA</li>
-                    <li class="skills__it-li">Java Script</li>
-                    <li class="skills__it-li">React</li>
-                    <li class="skills__it-li">Redux</li>
-                    <li class="skills__it-li">English - A2</li>
+            <section id="jobs-id" class="jobs">
+                <h1 class="jobs__title">My Jobs:</h1>
+                <ul class="jobs__block">
+                    <li class="jobs__block-item">
+                        <a class="jobs__block-item-link" href="https://react-pizza-avgust.herokuapp.com/" target="_blank" >
+                            <img class="jobs__img" src="img/react-pizza.png" alt="react-pizza" >
+                        </a>
+                    </li>
+                    <li class="jobs__block-item">
+                        <a class="jobs__block-item-link" href="https://dmitrii23748.github.io/multi/" target="_blank">
+                            <img class="jobs__img" src="img/desire.png" alt="desire" >
+                        </a>
+                    </li>
                 </ul>
-            </section>
-            <section class="aboutme">
-                <h2 class="container__title">About Me:</h2>
-                <p>I am a beginner front-end developer. I've been programming for six months.</p>
-                <p>I am currently learning react-redux. </p>
-                <p>In the future, I plan to study Node js to use it in backand development.
-                    I enjoy working in a team. 
-                </p>
-                <p>I believe that my perseverance and stubbornness will help me to become 
-                    a front-end developer at the beginning and then a full stack developer.</p>
             </section>
         </main>
         <footer class="footer">
@@ -86,6 +152,6 @@
             </ul>
         </footer>
     </div>
-    
+    <script src="script.js"></script>
 </body>
 </html>
