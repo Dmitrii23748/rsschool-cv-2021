@@ -273,7 +273,7 @@ li {
     padding-bottom: 20px;
   }
 
-
+  /* меню бургер */
   body.lock {
     overflow: hidden;
   }
